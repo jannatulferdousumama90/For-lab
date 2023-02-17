@@ -2,17 +2,13 @@
 
 
 
-if(isset($_REQUEST['submit']))
-{
-	if($_REQUEST['name'] == null)
-	{
-		echo "invalid user name";
-	}
-	else
-	{
-		$name = $_REQUEST['name'];
-		echo $name;
-	}
+if (isset($_GET['submit'])) {
+    if (empty($_GET['name'])) {
+        echo "invalid user name";
+    } else {
+        $name = $_GET['name'];
+        echo $name;
+    }
 }
 
 ?>
@@ -29,7 +25,7 @@ if(isset($_REQUEST['submit']))
 		<input type="name" name="name" value=""><br>
 		<input type="submit" name="submit" value="submit">
 		<hr>
-	</form>
+	</form>th
 
 </body>
 </html>
